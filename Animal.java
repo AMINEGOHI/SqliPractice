@@ -4,9 +4,18 @@ class Animal {
         return "hello!";
     }
 
-    public static void main(String[] args) {
+    public static String getCatGreeting() {
+        return "meoww!";
+    }
 
-        System.out.println(getDefaultGreeting());
+    public static void main(String[] args) {
+        String output = " ";
+        if (args[0].equalsIgnoreCase("cat")) {
+            output = getCatGreeting();
+        } else {
+            output = getDefaultGreeting();
+        }
+        System.out.println(output);
 
     }
 
